@@ -1,2 +1,10 @@
+[project]
+name = "lab_media_calc"
+version = "1.0.0"
+dependencies = [
+    "flet==1.0.1",
+    "certifi>=2025.4.26"
+]
+
 [tool.flet.flutter.pubspec.dependency_overrides]
 jni = "^1.1.0"
