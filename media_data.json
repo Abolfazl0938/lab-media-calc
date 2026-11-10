@@ -1,0 +1,26 @@
+[
+    {
+        "name": "EC Broth",
+        "base_weight_per_liter": 37.0
+    },
+    {
+        "name": "Muller Hinton Agar",
+        "base_weight_per_liter": 38.0
+    },
+    {
+        "name": "Blood Agar Base",
+        "base_weight_per_liter": 40.0
+    },
+    {
+        "name": "MacConkey Agar",
+        "base_weight_per_liter": 51.5
+    },
+    {
+        "name": "Tryptic Soy Agar (TSA)",
+        "base_weight_per_liter": 40.0
+    },
+    {
+        "name": "Nutrient Broth",
+        "base_weight_per_liter": 13.0
+    }
+]
