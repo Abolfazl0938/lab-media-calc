@@ -446,6 +446,24 @@ def main(page: ft.Page):
                         weight=ft.FontWeight.BOLD,
                     ),
                     history_list,
+                    ft.Container(height=10),
+                    ft.Row(
+                        alignment=ft.MainAxisAlignment.CENTER,
+                        vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                        spacing=5,
+                        controls=[
+                            ft.Icon(
+                                ft.Icons.SEND_ROUNDED,
+                                size=15,
+                                color=ft.Colors.BLUE_400,
+                            ),
+                            ft.Text(
+                                "Design & Development by @AbolfazlllMoradi",
+                                size=11,
+                                color=ft.Colors.GREY_600,
+                            ),
+                        ],
+                    ),
                 ],
             ),
         )
