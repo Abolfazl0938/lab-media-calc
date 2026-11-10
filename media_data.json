@@ -1,26 +1,82 @@
 [
     {
-        "name": "EC Broth",
-        "base_weight_per_liter": 37.0
+        "name": "Nutrient Agar (نوترینت آگار)",
+        "base_weight_per_liter": 28.0
     },
     {
-        "name": "Muller Hinton Agar",
-        "base_weight_per_liter": 38.0
+        "name": "Nutrient Broth (نوترینت براث)",
+        "base_weight_per_liter": 13.0
     },
     {
-        "name": "Blood Agar Base",
+        "name": "Tryptic Soy Agar - TSA (تریپتیک سویا آگار)",
         "base_weight_per_liter": 40.0
     },
     {
-        "name": "MacConkey Agar",
+        "name": "Tryptic Soy Broth - TSB (تریپتیک سویا براث)",
+        "base_weight_per_liter": 30.0
+    },
+    {
+        "name": "MacConkey Agar (مک‌کانکی آگار)",
         "base_weight_per_liter": 51.5
     },
     {
-        "name": "Tryptic Soy Agar (TSA)",
+        "name": "MacConkey Broth (مک‌کانکی براث)",
+        "base_weight_per_liter": 35.0
+    },
+    {
+        "name": "EC Broth (ای‌سی براث)",
+        "base_weight_per_liter": 37.0
+    },
+    {
+        "name": "Eosin Methylene Blue Agar - EMB (ایمب آگار)",
+        "base_weight_per_liter": 37.5
+    },
+    {
+        "name": "Sabouraud Dextrose Agar - SDA (سابورو دکستروز آگار)",
+        "base_weight_per_liter": 65.0
+    },
+    {
+        "name": "Sabouraud Dextrose Broth - SDB (سابورو دکستروز براث)",
+        "base_weight_per_liter": 30.0
+    },
+    {
+        "name": "Mueller Hinton Agar - MHA (مولر هینتون آگار)",
+        "base_weight_per_liter": 38.0
+    },
+    {
+        "name": "Blood Agar Base (پایه خون آگار)",
         "base_weight_per_liter": 40.0
     },
     {
-        "name": "Nutrient Broth",
-        "base_weight_per_liter": 13.0
+        "name": "Brain Heart Infusion Agar - BHIA (بی‌اچ‌آی آگار)",
+        "base_weight_per_liter": 52.0
+    },
+    {
+        "name": "Brain Heart Infusion Broth - BHIB (بی‌اچ‌آی براث)",
+        "base_weight_per_liter": 37.0
+    },
+    {
+        "name": "Plate Count Agar - PCA (پلیت کانت آگار)",
+        "base_weight_per_liter": 23.5
+    },
+    {
+        "name": "Buffered Peptone Water - BPW (بافر پپتون واتر)",
+        "base_weight_per_liter": 20.0
+    },
+    {
+        "name": "Baird Parker Agar Base (بایرد پارکر آگار)",
+        "base_weight_per_liter": 63.0
+    },
+    {
+        "name": "Simmons Citrate Agar (سیمونز سیترات آگار)",
+        "base_weight_per_liter": 24.2
+    },
+    {
+        "name": "Triple Sugar Iron Agar - TSI (تی‌اس‌آی آگار)",
+        "base_weight_per_liter": 64.5
+    },
+    {
+        "name": "MR-VP Broth (ام‌آر-وی‌پی براث)",
+        "base_weight_per_liter": 17.0
     }
 ]
