@@ -4,6 +4,7 @@ from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
+from process_tab import build_process_tab
 import flet as ft
 
 DATA_FILE = Path(__file__).resolve().parent / "media_data.json"
@@ -217,6 +218,7 @@ def show_number(number):
 
 
 def main(page: ft.Page):
+    process_view = build_process_tab(page)
     page.title = "دستیار آزمایشگاه کشت | Lab Assistant"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 12
@@ -272,14 +274,27 @@ def main(page: ft.Page):
     )
 
     def toggle_theme(e):
-        if page.theme_mode == ft.ThemeMode.LIGHT:
-            page.theme_mode = ft.ThemeMode.DARK
-            theme_btn.icon = ft.Icons.LIGHT_MODE
-            result_box.bgcolor = ft.Colors.BLUE_GREY_900
-        else:
+        if page.theme_mode == ft.ThemeMode.DARK:
             page.theme_mode = ft.ThemeMode.LIGHT
+            result_box.bgcolor = ft.Colors.WHITE
             theme_btn.icon = ft.Icons.DARK_MODE
-            result_box.bgcolor = ft.Colors.BLUE_50
+        else:
+            page.theme_mode = ft.ThemeMode.DARK
+            result_box.bgcolor = ft.Colors.BLUE_GREY_900
+            theme_btn.icon = ft.Icons.LIGHT_MODE
+
+        # بازسازی کامل تب فرایندها متناسب با تم جدید
+        try:
+            # فرض بر این است که تب فرایندها درون یک تب‌سایت یا کنترلر نگهداری می‌شود
+            # یا اگر مستقیماً به عنوان محتوای تب ثبت شده، آن را به‌روز می‌کنیم:
+            new_tab_content = build_process_tab(page)
+
+            # اگر محتوای تب فرایندها را توی متغیر یا تبِ مربوطه می‌گذاری،
+            # آن را با new_tab_content جایگزین کن. مثلاً:
+            process_view.content = new_tab_content
+        except Exception as ex:
+            print("Error refreshing process tab theme:", ex)
+
         page.update()
 
     theme_btn.on_click = toggle_theme
@@ -1608,6 +1623,7 @@ def main(page: ft.Page):
         calc_view.visible = idx == 0
         notebook_view.visible = idx == 1
         inventory_view.visible = idx == 2
+        process_view.visible = idx == 3
         add_btn.visible = idx == 0
         if idx == 2:
             update_notifications_and_views()
@@ -1631,6 +1647,11 @@ def main(page: ft.Page):
                 icon=ft.Icons.INVENTORY_2_OUTLINED,
                 selected_icon=ft.Icons.INVENTORY_2,
                 label="انبار",
+            ),
+            ft.NavigationBarDestination(
+                icon=ft.Icons.TIMER_OUTLINED,
+                selected_icon=ft.Icons.TIMER,
+                label="روند کار",
             ),
         ],
     )
@@ -1659,6 +1680,7 @@ def main(page: ft.Page):
                     calc_view,
                     notebook_view,
                     inventory_view,
+                    process_view,
                     ft.Container(height=10),
                     ft.Row(
                         controls=[
